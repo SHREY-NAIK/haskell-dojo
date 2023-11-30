@@ -64,6 +64,9 @@ getDiag2 (row:rows) = case reverse row of
     [] -> []
     (s:_) -> s : getDiag2 (map reverse (map (drop 1) (map reverse rows)))
 
+getAllLines :: Board -> [Line]
+getAllLines board = concat [board, transpose board, [getDiag1 board, getDiag2 board]]
+
 -- Q#07
 
 

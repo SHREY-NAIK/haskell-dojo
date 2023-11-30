@@ -84,3 +84,4 @@ showSquare :: Square -> String
 showSquare X = "X"
 showSquare O = "O"
 showSquare Empty = "_"
+
